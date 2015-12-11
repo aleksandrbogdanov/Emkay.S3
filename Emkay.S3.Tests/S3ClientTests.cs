@@ -1,8 +1,6 @@
 ﻿using System;
 using System.Diagnostics;
 using System.Net;
-using Amazon;
-using Amazon.S3;
 using NUnit.Framework;
 
 namespace Emkay.S3.Tests
