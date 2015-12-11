@@ -19,7 +19,8 @@ namespace Emkay.S3.Tests
                         {
                             SourceFiles = EnumerateFiles(SourceFolder),
                             Bucket = Bucket,
-                            DestinationFolder = DestinationFolder
+                            DestinationFolder = DestinationFolder,
+                            Region = Region
                         };
         }
 
@@ -42,6 +43,13 @@ namespace Emkay.S3.Tests
         public void Execute_should_succeed()
         {
             Assert.IsTrue(_publish.Execute());
+        }
+
+        public static void Main()
+        {
+            var c = new PublishFilesTests();
+            c.SetUp();
+            c.Execute_should_succeed();
         }
 
 

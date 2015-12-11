@@ -254,10 +254,17 @@ namespace Emkay.S3
         /// <param name="bucketName">The name of the bucket.</param>
         public void EnsureBucketExists(string bucketName)
         {
-            if (!AmazonS3Util.DoesS3BucketExist(_amazonS3Client, bucketName))
+            try
             {
+                _amazonS3Client.GetBucketWebsite(bucketName);
+            }
+            catch (Exception e) {
                 CreateBucket(bucketName);
             }
+           // if (!AmazonS3Util.DoesS3BucketExist(_amazonS3Client, bucketName))
+           // {
+           //     CreateBucket(bucketName);
+           // }
         }
 
         /// <summary>

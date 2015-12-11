@@ -1,8 +1,8 @@
 <?xml version="1.0"?>
 <package >
   <metadata>
-    <id>Emkay.S3</id>
-    <version>0.9.0.1</version>
+    <id>H24.Emkay.S3</id>
+    <version>0.10.0.1</version>
     <authors>Martin Komischke</authors>
     <owners>Martin Komischke</owners>
     <licenseUrl>http://opensource.org/licenses/mit-license.php</licenseUrl>
